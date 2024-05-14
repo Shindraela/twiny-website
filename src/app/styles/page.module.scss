@@ -10,13 +10,17 @@
 
   &Header {
     width: 100%;
-    max-width: var(--max-width);
     margin: 0 auto;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1;
+    transition: background-color 0.3s ease;
+
+    &Scrolled {
+      background-color: rgba(0, 0, 0, .5);
+    }
   }
 
   &Center {
