@@ -1,0 +1,119 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: 1.6rem;
+
+  &ToggleButton {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+
+    span {
+      width: 100%;
+      height: 3px;
+      background-color: black;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    &:hover {
+      span {
+        opacity: 0.7;
+      }
+    }
+
+    &.open {
+      span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
+  }
+
+  &Nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    border: 1px solid black;
+    opacity: 0;
+    pointer-events: none; // Cache les éléments lorsqu'ils ne sont pas visibles
+    transform: translateY(-10px); // Décale le menu vers le haut pour le cacher
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    &.open {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+
+      opacity: 1;
+      pointer-events: auto; // Rend les éléments cliquables lorsqu'ils sont visibles
+      transform: translateY(0); // Affiche le menu à sa position normale
+    }
+
+    li {
+      text-align: center;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+    }
+
+    @include breakpoint(desktop) {
+      display: flex;
+    }
+  }
+
+  &Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); // Ajoute un fond semi-transparent
+    z-index: 999; // Assure que l'overlay est en-dessous du menu
+  }
+
+  &DownloadButton {
+    padding: 1.6rem 3.2rem;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+
+    &:hover {
+      background-color: var(--secondary-color);
+    }
+  }
+}

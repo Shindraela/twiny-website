@@ -1,0 +1,43 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.feature {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 1.6rem;
+
+  @include breakpoint(desktop) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &Image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-height: 48rem;
+  }
+
+  &Title {
+    background: linear-gradient(to right, #41279B 0%, #FD336C 50%, #FFA503 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &Paragraph {
+    margin: 3.2rem 0;
+  }
+
+  &Button {
+    padding: 1.6rem 3.2rem;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+
+    &:hover {
+      background-color: var(--secondary-color);
+    }
+  }
+}

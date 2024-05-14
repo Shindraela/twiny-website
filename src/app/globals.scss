@@ -1,0 +1,119 @@
+@import './styles/fonts.scss';
+@import './styles/variables.scss';
+@import './styles/mixins.scss';
+
+:root {
+  font-size: 62.5%;
+  --base-font-size: 1.4rem;
+
+  --max-width: 1280px;
+  --border-radius: 1rem;
+  --font-mono: 'poppins-regular', sans-serif;
+  --font-bold: 'poppins-bold', sans-serif;
+  --font-semibold: 'poppins-semiBold', sans-serif;
+  --font-thin: 'poppins-thin', sans-serif;
+
+  --white-color: #FFFFFF;
+  --black-color: #121212;
+  --primary-color: #FFA503;
+  --secondary-color: #FFC62A;
+  --tertiary-color: #5C0099;
+  --violet-color: #DDB4FF;
+  --cream-color: #F9DBD1;
+  --nude-color: #FEE5CF;
+
+  --button-borderRadius: 5rem;
+  --button-fontSizeMobile: 1.6rem;
+  --button-fontSizeDesktop: 1.8rem;
+  --button-backgroundColor: var(--primary-color);
+  --button-backgroundColor-hover: var(--secondary-color);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow-x: hidden;
+  font-family: var(--font-mono);
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-size: var(--base-font-size);
+}
+
+// Tailles des titres
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-bold);
+}
+
+h1 {
+  @include heading(mobileH1);
+
+  @include breakpoint(desktop) {
+    @include heading(desktopH1);
+  }
+}
+
+h2 {
+  @include heading(mobileH2);
+
+  @include breakpoint(desktop) {
+    @include heading(desktopH2);
+  }
+}
+
+h3 {
+  @include heading(mobileH3);
+
+  @include breakpoint(desktop) {
+    @include heading(desktopH3);
+  }
+}
+
+h4 {
+  @include heading(mobileH4);
+
+  @include breakpoint(desktop) {
+    @include heading(desktopH4);
+  }
+}
+
+p,
+span {
+  @include text(mobileSmall);
+
+  @include breakpoint(desktop) {
+    @include text(desktopLarge);
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-bold);
+  font-size: var(--button-fontSizeMobile);
+  border-radius: var(--button-borderRadius);
+
+  @include breakpoint(desktop) {
+    font-size: var(--button-fontSizeDesktop);
+  }
+
+  &:hover {
+    transition: all 0.3s ease;
+  }
+}

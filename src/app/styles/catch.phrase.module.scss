@@ -1,0 +1,29 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.catchPhrase {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1.6rem;
+
+  &Title {
+    background: linear-gradient(to right, #41279B 0%, #FD336C 50%, #FFA503 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+
+  &Button {
+    padding: 1.6rem 3.2rem;
+    margin-top: 4rem;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+
+    &:hover {
+      background-color: var(--secondary-color);
+    }
+  }
+}

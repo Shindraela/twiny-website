@@ -1,0 +1,48 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.home {
+  &Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &Header {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  &Center {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &Feature {
+    margin-top: 11rem;
+  }
+
+  &CommunitFeature,
+  &CatchPhrase {
+    margin-top: 6.8rem;
+  }
+
+  &Feature,
+  &CommunityFeature,
+  &CatchPhrase {
+    @include breakpoint(desktop-lg) {
+      margin-left: 24rem;
+      margin-right: 24rem;
+    }
+  }
+}

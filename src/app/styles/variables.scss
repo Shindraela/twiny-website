@@ -1,0 +1,30 @@
+$base-font-size: 1.4rem;
+
+$breakpoints: (
+  mobile-xs: 375px,
+  mobile: 576px,
+  tablet: 768px,
+  desktop: 1024px,
+  desktop-lg: 1440px,
+  desktop-xl: 1920px
+);
+
+$heading-font-size: (
+  mobileH1: 4.8rem,
+  mobileH2: 3.2rem,
+  mobileH3: 2.4rem,
+  mobileH4: 1.8rem,
+  desktopH1: 6.8rem,
+  desktopH2: 4.2rem,
+  desktopH3: 3.2rem,
+  desktopH4: 2.4rem
+);
+
+$text-font-size: (
+  mobileSmall: 1.4rem,
+  mobileMedium: 1rem,
+  mobileLarge: 1.6rem,
+  desktopSmall: 1.6rem,
+  desktopMedium: 1.2rem,
+  desktopLarge: 1.8rem,
+);
