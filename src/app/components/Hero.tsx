@@ -1,13 +1,11 @@
 import React from 'react';
 import styles from '../styles/hero.module.scss';
-// const heroBg = '../../../public/img/header-background.png';
 
 export const Hero = () => {
   return (
     <div className={styles.hero}>
       <div
         className={styles.background}
-        // style={{ backgroundImage: `url(${heroBg.src})` }}
       ></div>
 
       <div className={styles.content}>

@@ -52,6 +52,7 @@ export const Menu = () => {
       <div className={styles.menuLogo}>
         <Image
           src={twinyLogo}
+          priority
           width={90}
           height={30}
           alt="Twiny Logo"
