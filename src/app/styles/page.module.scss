@@ -32,9 +32,13 @@
     margin-top: 11rem;
   }
 
-  &CommunitFeature,
-  &CatchPhrase {
+  &CommunitFeature {
     margin-top: 6.8rem;
+  }
+
+  &CatchPhrase {
+    margin-top: 9.6rem;
+    margin-bottom: 9.6rem;
   }
 
   &Feature,
@@ -44,5 +48,9 @@
       margin-left: 24rem;
       margin-right: 24rem;
     }
+  }
+
+  &Footer {
+    width: 100%;
   }
 }

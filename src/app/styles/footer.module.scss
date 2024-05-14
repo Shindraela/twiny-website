@@ -1,0 +1,127 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.footer {
+  background-color: #F0F0F0;
+
+  @include breakpoint(desktop-lg) {
+    padding: 9.6rem 24rem;
+  }
+
+  &Links {
+    &Blocks {
+      display: flex;
+      flex-direction: column;
+      padding: 4.8rem 1.6rem 6.4rem;
+
+      @include breakpoint(desktop-lg) {
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    }
+
+    &Block {
+      @include breakpoint(desktop-lg) {
+
+        &:not(:first-of-type),
+        &:not(:last-of-type) {
+          margin: 0 2.4rem;
+        }
+      }
+
+      &Title {
+        &:not(:first-of-type) {
+          margin-bottom: 3.2rem;
+        }
+
+        font-family: var(--font-bold);
+        @include text(mobileLarge);
+
+        @include breakpoint(desktop-lg) {
+          @include text(desktopLarge);
+        }
+      }
+
+    }
+  }
+
+  &Link {
+    @include text(mobileSmall);
+    display: block;
+    margin: 1.6rem 0;
+    width: fit-content;
+
+    background:
+      linear-gradient(to right,
+        #41279B,
+        #41279B),
+      linear-gradient(to right, #41279B 0%, #FD336C 50%, #FFA503 100%);
+    background-size: 100% .2rem, 0 .2rem;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+
+    @include breakpoint(desktop-lg) {
+      @include text(desktopSmall);
+    }
+
+    &:hover {
+      background-size: 0 .3rem, 100% .3rem;
+    }
+
+    &Networks {
+      display: flex;
+      align-items: center;
+    }
+
+    &Image {
+      $logoSize: 3.2rem;
+      width: $logoSize;
+      height: $logoSize;
+      margin: 1.6rem 1.6rem 0;
+      background-image: url('../../../public/img/logo_rs.svg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &Separator {
+    border: none;
+    height: .05rem;
+    color: #21262E;
+    background-color: #21262E;
+
+    &Mobile {
+      margin: 2.4rem 0;
+
+      @include breakpoint(desktop-lg) {
+        display: none;
+      }
+    }
+
+    &Desktop {
+      display: none;
+
+      @include breakpoint(desktop-lg) {
+        display: block;
+      }
+    }
+  }
+
+  &AllRightsReserved {
+    text-align: center;
+    padding-bottom: 4.4rem;
+    @include text(mobileSmall);
+
+    @include breakpoint(desktop-lg) {
+      padding-bottom: 0;
+      margin-top: 6.4rem;
+      @include text(desktopSmall);
+    }
+  }
+}
