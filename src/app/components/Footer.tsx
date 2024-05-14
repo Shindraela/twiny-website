@@ -70,7 +70,7 @@ export const Footer = () => {
             href="#"
             className={styles.footerLink}
           >
-            Conditions d'utilisation
+            Conditions d&apos;utilisation
           </a>
         </div>
       </div>

@@ -36,10 +36,10 @@ export const CommunityFeature = () => {
         <p className={styles.communityFeatureParagraph}>
           Découvre notre fonctionnalité de communauté dynamique ! Participe à
           des discussions de groupe sur des sujets qui te passionnent, que ce
-          soit les voyages, la musique ou la cuisine. C'est l'occasion parfaite
-          pour rencontrer de nouvelles personnes partageant tes intérêts.
-          Rejoins-nous et élargis ton cercle d'amis en discutant de ce que tu
-          aimes le plus !
+          soit les voyages, la musique ou la cuisine. C&apos;est l&apos;occasion
+          parfaite pour rencontrer de nouvelles personnes partageant tes
+          intérêts. Rejoins-nous et élargis ton cercle d&apos;amis en discutant
+          de ce que tu aimes le plus !
         </p>
 
         <button className={styles.communityFeatureButton}>

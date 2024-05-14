@@ -34,9 +34,9 @@ export const Feature = () => {
         </h2>
 
         <p className={styles.featureParagraph}>
-          Salut toi, enfin une appli qui fait matcher les âmes sœurs de l'amitié
-          ! Imagine Tinder, mais pour trouver ton nouveau meilleur pote, ta
-          complice de folies ou ton acolyte pour partager des aventures
+          Salut toi, enfin une appli qui fait matcher les âmes sœurs de
+          l&apos;amitié ! Imagine Tinder, mais pour trouver ton nouveau meilleur
+          pote, ta complice de folies ou ton acolyte pour partager des aventures
           inoubliables. Adieu solitude, bonjour amitié ! Fais glisser vers la
           droite pour des rencontres amicales sensationnelles ! 🎉🤝
         </p>

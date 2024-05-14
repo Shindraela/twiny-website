@@ -5,11 +5,11 @@ export const CatchPhrase = () => {
   return (
     <div className={styles.catchPhrase}>
       <h2 className={styles.catchPhraseTitle}>
-        Enfin une appli qui fait matcher les âmes sœurs de l’amitié ! 🌟🤝
+        Enfin une appli qui fait matcher les âmes sœurs de l&apos;amitié ! 🌟🤝
       </h2>
 
       <button className={styles.catchPhraseButton}>
-        Télécharger l'application
+        Télécharger l&apos;application
       </button>
     </div>
   );
