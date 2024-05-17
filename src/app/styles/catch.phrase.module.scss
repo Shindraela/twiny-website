@@ -8,12 +8,21 @@
   align-items: center;
   margin: 0 1.6rem;
 
+  &Container {
+    display: inline-block;
+    text-align: center;
+  }
+
   &Title {
     background: linear-gradient(to right, #41279B 0%, #FD336C 50%, #FFA503 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-align: center;
+    display: inline;
+  }
+
+  &Emojis {
+    margin-left: 1rem;
   }
 
   &Button {
