@@ -1,5 +1,4 @@
-@import '../styles/variables.scss';
-@import '../styles/mixins.scss';
+@import '@/app/styles/import';
 
 .catchPhrase {
   position: relative;
@@ -26,13 +25,7 @@
   }
 
   &Button {
-    padding: 1.6rem 3.2rem;
     margin-top: 4rem;
-    color: var(--white-color);
-    background-color: var(--primary-color);
-
-    &:hover {
-      background-color: var(--secondary-color);
-    }
+    @include buttonPrimary();
   }
 }

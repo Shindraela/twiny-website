@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import styles from '../styles/feature.module.scss';
-import { supportsWebP } from '../utils';
+import styles from './feature.module.scss';
+import { supportsWebP } from '../../utils';
 import imageWebP from '/public/img/feature@4x.webp';
 import imageJpg from '/public/img/feature@4x.jpg';
 

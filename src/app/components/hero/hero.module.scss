@@ -1,5 +1,4 @@
-@import '../styles/variables.scss';
-@import '../styles/mixins.scss';
+@import '@/app/styles/import';
 
 .hero {
   position: relative;
@@ -15,7 +14,7 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../../../public/img/header-background.png');
+  background-image: url('../../../../public/img/header-background.png');
   background-size: cover;
   filter: blur(1rem);
   transform: scale(1.1); // hack to hide background-image white borders
@@ -31,19 +30,7 @@
   color: var(--white-color);
 }
 
-.title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
 .button {
-  padding: 1.6rem 3.2rem;
   margin-top: 3.2rem;
-  color: var(--white-color);
-  background-color: var(--primary-color);
-
-  &:hover {
-    background-color: var(--secondary-color);
-  }
+  @include buttonPrimary();
 }

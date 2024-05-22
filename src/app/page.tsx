@@ -1,13 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import styles from './styles/page.module.scss';
-import { Menu } from './components/Menu';
-import { Hero } from './components/Hero';
-import { Feature } from './components/Feature';
-import { CommunityFeature } from './components/CommunityFeature';
-import { CatchPhrase } from './components/CatchPhrase';
-import { Footer } from './components/Footer';
+import styles from './page.module.scss';
+import { Menu } from './components/menu/Menu';
+import { Hero } from './components/hero/Hero';
+import { Feature } from './components/feature/Feature';
+import { CommunityFeature } from './components/communityFeature/CommunityFeature';
+import { CatchPhrase } from './components/catchPhrase/CatchPhrase';
+import { Footer } from './components/footer/Footer';
 
 const Home = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -27,7 +27,11 @@ const Home = () => {
 
   return (
     <main className={styles.homeMain}>
-      <header className={`${styles.homeHeader} ${scrolling ? styles.homeHeaderScrolled : ''}`}>
+      <header
+        className={`${styles.homeHeader} ${
+          scrolling ? styles.homeHeaderScrolled : ''
+        }`}
+      >
         <Menu />
       </header>
       <section className={styles.homeCenter}>
@@ -47,6 +51,6 @@ const Home = () => {
       </section>
     </main>
   );
-}
+};
 
 export default Home;

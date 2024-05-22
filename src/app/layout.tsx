@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import './globals.scss';
+import './styles/_globals.scss';
 
 export const metadata: Metadata = {
   title: 'Twiny',

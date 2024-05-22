@@ -1,14 +1,13 @@
-@import '../styles/variables.scss';
-@import '../styles/mixins.scss';
+@import '@/app/styles/import';
 
-.feature {
+.communityFeature {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 0 1.6rem;
+  margin: 6.8rem 1.6rem 0;
 
-  @include breakpoint(desktop) {
-    flex-direction: row;
+  @include mq($from: desktop) {
+    flex-direction: row-reverse;
     align-items: center;
   }
 
@@ -32,12 +31,6 @@
   }
 
   &Button {
-    padding: 1.6rem 3.2rem;
-    color: var(--white-color);
-    background-color: var(--primary-color);
-
-    &:hover {
-      background-color: var(--secondary-color);
-    }
+    @include buttonPrimary();
   }
 }

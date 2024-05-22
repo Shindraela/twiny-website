@@ -1,5 +1,4 @@
-@import '../styles/variables.scss';
-@import '../styles/mixins.scss';
+@import '@/app/styles/import';
 
 .footer {
   background-color: #F0F0F0;
@@ -79,7 +78,7 @@
       width: $logoSize;
       height: $logoSize;
       margin: 1.6rem 1.6rem 0;
-      background-image: url('../../../public/img/logo_rs.svg');
+      background-image: url('../../../../public/img/logo_rs.svg');
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;

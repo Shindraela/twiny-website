@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import styles from '../styles/menu.module.scss';
+import styles from './menu.module.scss';
 const twinyLogo = '/img/twiny.svg';
 
 export const Menu = () => {
@@ -16,7 +16,7 @@ export const Menu = () => {
 
   return (
     <div className={styles.menu}>
-      <div>
+      <div className={styles.menuToggleContainer}>
         <button
           className={`${styles.menuToggleButton} ${isOpen ? styles.open : ''}`}
           onClick={toggleMenu}
@@ -37,7 +37,7 @@ export const Menu = () => {
             <a href="#">Assistance</a>
           </li>
           <li>
-            <button>Télécharger</button>
+            <button className={styles.menuDownloadButton}>Télécharger</button>
           </li>
         </ul>
 
@@ -47,15 +47,14 @@ export const Menu = () => {
             onClick={toggleMenu}
           ></div>
         )}
-      </div>
 
-      <div className={styles.menuLogo}>
         <Image
           src={twinyLogo}
           priority
           width={90}
           height={30}
           alt="Twiny Logo"
+          className={styles.menuLogo}
         />
       </div>
 

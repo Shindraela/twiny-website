@@ -30,3 +30,25 @@
 @mixin text($size) {
   font-size: map-get($text-font-size, $size);
 }
+
+@mixin button($color, $bgColor, $colorHover, $bgColorHover) {
+  color: $color;
+  background-color: $bgColor;
+
+  &:hover {
+    color: $colorHover;
+    background-color: $bgColorHover;
+  }
+}
+
+@mixin buttonPrimary() {
+  @include button(var(--white-color), var(--primary-color), var(--white-color), var(--secondary-color));
+}
+
+@mixin buttonSecondary() {
+  @include button(var(--primary-color), var(--white-color), var(--white-color), var(--secondary-color));
+}
+
+@mixin buttonTertiary() {
+  @include button(var(--darkGrey-color), 'none', var(--black-color), var(--nude-color));
+}

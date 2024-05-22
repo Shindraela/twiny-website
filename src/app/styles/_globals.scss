@@ -1,6 +1,4 @@
-@import './styles/fonts.scss';
-@import './styles/variables.scss';
-@import './styles/mixins.scss';
+@import './reset', './import';
 
 :root {
   font-size: 62.5%;
@@ -15,10 +13,15 @@
 
   --white-color: #FFFFFF;
   --black-color: #121212;
+  --lightGrey-color: #E8EAEE;
+  --darkGrey-color: #80848A;
+
   --primary-color: #FFA503;
   --secondary-color: #FFC62A;
   --tertiary-color: #5C0099;
+
   --violet-color: #DDB4FF;
+  --pink-color: #FD336C;
   --cream-color: #F9DBD1;
   --nude-color: #FEE5CF;
 
@@ -29,12 +32,6 @@
   --button-backgroundColor-hover: var(--secondary-color);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 html,
 body {
   max-width: 100vw;
@@ -43,7 +40,6 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
   font-size: var(--base-font-size);
 }
 
@@ -58,7 +54,7 @@ h4 {
 h1 {
   @include heading(mobileH1);
 
-  @include breakpoint(desktop) {
+  @include mq($from: desktop) {
     @include heading(desktopH1);
   }
 }
@@ -66,7 +62,7 @@ h1 {
 h2 {
   @include heading(mobileH2);
 
-  @include breakpoint(desktop) {
+  @include mq($from: desktop) {
     @include heading(desktopH2);
   }
 }
@@ -74,7 +70,7 @@ h2 {
 h3 {
   @include heading(mobileH3);
 
-  @include breakpoint(desktop) {
+  @include mq($from: desktop) {
     @include heading(desktopH3);
   }
 }
@@ -82,7 +78,7 @@ h3 {
 h4 {
   @include heading(mobileH4);
 
-  @include breakpoint(desktop) {
+  @include mq($from: desktop) {
     @include heading(desktopH4);
   }
 }
@@ -91,29 +87,43 @@ p,
 span {
   @include text(mobileSmall);
 
-  @include breakpoint(desktop) {
+  @include mq($from: desktop) {
     @include text(desktopLarge);
   }
 }
 
-a {
-  color: inherit;
-  cursor: pointer;
-  text-decoration: none;
-}
-
 button {
-  border: none;
-  cursor: pointer;
   font-family: var(--font-bold);
   font-size: var(--button-fontSizeMobile);
   border-radius: var(--button-borderRadius);
+  padding: 1.95rem 3.2rem;
+  text-align: center;
 
-  @include breakpoint(desktop) {
+  @include mq($from: desktop) {
     font-size: var(--button-fontSizeDesktop);
+    padding: 1.6rem 3.2rem;
   }
 
   &:hover {
     transition: all 0.3s ease;
+
+    &:disabled,
+    &[disabled] {
+      color: var(--lightGrey-color);
+      background-color: var(--darkGrey-color);
+    }
   }
+
+  &:disabled,
+  &[disabled] {
+    color: var(--lightGrey-color);
+    background-color: var(--darkGrey-color);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  left: -9999rem;
+  height: 0;
+  width: 0;
 }

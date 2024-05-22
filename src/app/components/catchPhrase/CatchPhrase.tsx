@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import styles from '../styles/catch.phrase.module.scss';
-import emojis from '../../../public/img/emojis.png';
+import styles from './catch.phrase.module.scss';
+import emojis from '/public/img/emojis.png';
 
 export const CatchPhrase = () => {
   return (
