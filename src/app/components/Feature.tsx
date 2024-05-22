@@ -2,8 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import styles from '../styles/feature.module.scss';
 import { supportsWebP } from '../utils';
-import imageWebP from '../../../public/img/feature_1x.webp';
-import imageJpg from '../../../public/img/feature_1x.jpg';
+import imageWebP from '/public/img/feature@4x.webp';
+import imageJpg from '/public/img/feature@4x.jpg';
 
 export const Feature = () => {
   return (
@@ -12,26 +12,22 @@ export const Feature = () => {
         <Image
           src={imageWebP}
           alt="Image WebP"
-          width={360}
-          height={864}
-          sizes="100vw"
+          width={300}
+          height={804}
         />
         {/* Utilisation conditionnelle pour l'image alternative au format JPG */}
         {!supportsWebP() && (
           <Image
             src={imageJpg}
             alt="Image Responsive (JPG)"
-            width={360}
-            height={864}
-            sizes="100vw"
+            width={300}
+            height={804}
           />
         )}
       </div>
 
       <div className={styles.featureTexts}>
-        <h2 className={styles.featureTitle}>
-          Swipe, match et tisse des amitiés pour la vie
-        </h2>
+        <h2 className={styles.featureTitle}>Trouve ton âme-soeur platonique</h2>
 
         <p className={styles.featureParagraph}>
           Salut toi, enfin une appli qui fait matcher les âmes sœurs de

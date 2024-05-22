@@ -2,8 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import styles from '../styles/community.feature.module.scss';
 import { supportsWebP } from '../utils';
-import imageWebP from '../../../public/img/community_feature_1x.webp';
-import imageJpg from '../../../public/img/community_feature_1x.jpg';
+import imageWebP from '/public/img/community_feature@4x.webp';
+import imageJpg from '/public/img/community_feature@4x.jpg';
 
 export const CommunityFeature = () => {
   return (
@@ -12,18 +12,16 @@ export const CommunityFeature = () => {
         <Image
           src={imageWebP}
           alt="Image WebP"
-          width={360}
-          height={864}
-          sizes="100vw"
+          width={300}
+          height={804}
         />
         {/* Utilisation conditionnelle pour l'image alternative au format JPG */}
         {!supportsWebP() && (
           <Image
             src={imageJpg}
             alt="Image Responsive (JPG)"
-            width={360}
-            height={864}
-            sizes="100vw"
+            width={300}
+            height={804}
           />
         )}
       </div>
