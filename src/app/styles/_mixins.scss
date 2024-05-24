@@ -46,7 +46,7 @@
 }
 
 @mixin buttonSecondary() {
-  @include button(var(--primary-color), var(--white-color), var(--white-color), var(--secondary-color));
+  @include button(var(--primary-color), var(--white-color), var(--white-color), var(--black-color));
 }
 
 @mixin buttonTertiary() {

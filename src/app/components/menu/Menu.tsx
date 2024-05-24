@@ -26,27 +26,57 @@ export const Menu = () => {
           <span></span>
         </button>
 
-        <ul className={`${styles.menuNav} ${isOpen ? styles.open : ''}`}>
-          <li>
-            <a href="#">En savoir plus</a>
-          </li>
-          <li>
-            <a href="#">Sécurité</a>
-          </li>
-          <li>
-            <a href="#">Assistance</a>
-          </li>
-          <li>
-            <button className={styles.menuDownloadButton}>Télécharger</button>
-          </li>
-        </ul>
+        <div className={`${styles.menuNav} ${isOpen ? styles.open : ''}`}>
+          <nav
+            role="navigation"
+            aria-label="Menu - liens principaux"
+          >
+            <ul>
+              <li className={styles.menuItem}>
+                <a
+                  href="#"
+                  className={styles.menuLink}
+                >
+                  En savoir plus
+                </a>
+              </li>
+              <li className={styles.menuItem}>
+                <a
+                  href="#"
+                  className={styles.menuLink}
+                >
+                  Sécurité
+                </a>
+              </li>
+              <li className={styles.menuItem}>
+                <a
+                  href="#"
+                  className={styles.menuLink}
+                >
+                  Assistance
+                </a>
+              </li>
+            </ul>
+          </nav>
 
-        {isOpen && (
-          <div
-            className={styles.menuOverlay}
-            onClick={toggleMenu}
-          ></div>
-        )}
+          <div className={styles.menuFooter}>
+            <button className={styles.menuLinkButton}>Télécharger</button>
+
+            <ul className={styles.menuFooterLinks}>
+              <li className={styles.menuLinkImage}></li>
+              <li className={styles.menuLinkImage}></li>
+              <li className={styles.menuLinkImage}></li>
+              <li className={styles.menuLinkImage}></li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          className={`${styles.menuOverlay} ${
+            isOpen ? styles.menuOverlayOpen : ''
+          }`}
+          onClick={toggleMenu}
+        ></div>
 
         <Image
           src={twinyLogo}
